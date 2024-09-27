@@ -1,0 +1,77 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    url('../../assets/images/Background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+  }
+  
+  .navbar {
+    width: 100%;
+    background-color: #f0f0f0; /* Light gray background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensures navbar stays on top of other content */
+  }
+  
+  .navbar-content {
+    display: flex;
+    justify-content: space-between; /* This will push the buttons to the right */
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px; /* Or any other max-width you prefer */
+    margin: 0 auto;
+    height: 60px; /* Adjust this value to set the height of your navbar */
+  }
+  
+  h1 {
+    margin: 0; /* Remove default margin */
+  }
+  
+  .nav-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+  }
+
+  .title-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  .title-link:hover {
+    text-decoration: underline;
+  }
+  
+  button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff; /* Blue background for buttons */
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  
+  .main-content {
+    padding: 80px 20px 20px; /* Top padding should be larger than navbar height */
+    max-width: 1200px; /* Match the max-width of navbar-content */
+    margin: 0 auto;
+  }

@@ -1,0 +1,41 @@
+<nav class="navbar">
+    <div class="navbar-content">
+      <nav class="navbar">
+        <div class="navbar-content">
+          <h1>
+            <a [routerLink]="['/']" class="title-link">{{ homeData.title }}</a>
+          </h1>
+          <div class="nav-buttons">
+            <button (click)="toggleAuthDialog()">Sign-in</button>
+            <button (click)="goToCart()">Cart</button>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="nav-buttons">
+
+
+       
+        <button (click)="toggleAuthDialog()">Sign-in</button>
+        <button  (click)="goToCart()">Cart</button>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div class="floating-products-container">
+    <app-product-list></app-product-list>
+  </div>
+
+  <app-auth-dialog 
+    *ngIf="showAuthDialog" 
+    (close)="toggleAuthDialog()" 
+    (signIn)="onSignIn()" >
+    
+  </app-auth-dialog>
+  
+  
+  
+
+  

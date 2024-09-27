@@ -1,0 +1,20 @@
+
+<div class="cart-container">
+    <div *ngFor="let item of cart" class="cart-item">
+      <img [src]="item.product.image" alt="{{ item.product.name }}" class="cart-item-image">
+      <div class="cart-item-details">
+        <div class="cart-item-name">{{ item.product.name }}</div>
+        <div class="cart-item-quantity">
+          <button (click)="decrementQuantity(item)">-</button>
+          <span>{{ item.quantity }}</span>
+          <button (click)="incrementQuantity(item)">+</button>
+        </div>
+        <div class="cart-item-price">Price: {{ item.product.price }} Rs</div>
+        <button (click)="removeItem(item.product.id)" class="remove-button">Remove</button>
+      </div>
+    </div>
+    <div class="cart-total">
+      Total: {{ getTotal() }} Rs
+    </div>
+    <button (click)="checkout()" class="checkout-button">Checkout</button>
+  </div>
